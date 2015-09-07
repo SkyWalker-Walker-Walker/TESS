@@ -1,10 +1,14 @@
 package jp.co.skai.tess;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -12,6 +16,16 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Button button = (Button)findViewById(R.id.btn_login);
+        button.setOnClickListener(new OnClickListener(){
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "ログインしました", Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(getApplication(),TopActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
