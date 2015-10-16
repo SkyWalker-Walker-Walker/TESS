@@ -1,36 +1,183 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="theamb.sdc.kss.MainActivity">
-
-    <TextView android:text="社員番号" android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvShainbangou" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#000000"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="10dp"
+    tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="交通費申請"
+        android:textSize="40sp"
+        android:textColor="#ffffff"
+        android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:text="社員番号"
+        android:id="@+id/tvShainbangou"
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="right"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
         android:text="社員名"
         android:id="@+id/tvShainmei"
-        android:layout_below="@+id/tvShainbangou"
-        android:layout_alignParentStart="true" />
-
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/tvShainmei"
-        android:layout_alignParentStart="true" />
-
+        android:textSize="20sp"
+        android:textColor="#ffffff"
+        android:gravity="right"/>
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:text="ログアウト"
+        android:id="@+id/btnLogout"
+        android:textSize="20sp"
+        android:textColor="#666666"
+        android:layout_gravity="right" />
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="HELP!"
-        android:id="@+id/btnFromHelp"
-        android:layout_below="@+id/editText3"
-        android:layout_alignParentStart="true" />
-
-</RelativeLayout>
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:text="利用日"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/etRiyoubi"
+            android:background="#ffffff" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:text="From"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:id="@+id/etFrom"
+            android:background="#ffffff" />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="ﾍﾙﾌﾟ"
+            android:id="@+id/btnFromHelp"
+            android:textColor="#666666" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:text="To"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:id="@+id/etTo"
+            android:background="#ffffff" />
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="ﾍﾙﾌﾟ"
+            android:id="@+id/btnToHelp"
+            android:textColor="#666666" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="5dp" >
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:text="運賃"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:id="@+id/etUnchin"
+            android:background="#ffffff" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:text="用途"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:id="@+id/etYouto"
+            android:background="#ffffff" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp">
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="25dp"
+            android:text="片道／往復"
+            android:textSize="20sp"
+            android:textColor="#ffffff" />
+        <RadioGroup
+            android:layout_height="25dp"
+            android:layout_width="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="25dp"
+                android:text="片道"
+                android:id="@+id/rbKatamichi"
+                android:textSize="20sp"
+                android:textColor="#ffffff"/>
+            <RadioButton
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="往復"
+                android:id="@+id/rbOufuku"
+                android:textSize="20sp"
+                android:textColor="#ffffff"/>
+        </RadioGroup>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="確定"
+        android:id="@+id/btnKakutei"
+        android:textSize="20sp"
+        android:textColor="#666666"
+        android:layout_gravity="center"/>
+</LinearLayout>

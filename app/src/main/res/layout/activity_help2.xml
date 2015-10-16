@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#000000"
+    tools:context="jp.co.skai.tess.Help2Activity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="エリア"
+        android:id="@+id/tvArea"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/white" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spiArea"
+        android:background="#ffffffff"
+        android:layout_below="@+id/tvArea"
+        android:focusable="false" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="都道府県"
+        android:id="@+id/tvPrefectures"
+        android:layout_below="@+id/spiArea"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/white" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spiPrefectures"
+        android:layout_below="@+id/tvPrefectures"
+        android:layout_alignParentStart="true"
+        android:background="#ffffffff" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="路線"
+        android:id="@+id/tvLines"
+        android:layout_below="@+id/spiPrefectures"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/white" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spiLines"
+        android:layout_below="@+id/tvLines"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="駅"
+        android:id="@+id/tvStation"
+        android:textColor="@android:color/white"
+        android:layout_below="@+id/spiLines"
+        android:layout_alignParentStart="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spiStation"
+        android:background="@android:color/white"
+        android:layout_below="@+id/tvStation"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="決定"
+        android:id="@+id/btnOK"
+        android:textSize="20sp"
+        android:textColor="#666666"
+        android:layout_gravity="center"
+        android:layout_below="@+id/spiStation"
+        android:layout_alignParentStart="true" />
+
+
+</RelativeLayout>
